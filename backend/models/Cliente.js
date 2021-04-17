@@ -17,15 +17,49 @@ class Cliente {
     }
 
     agregarMovimientos(cantidad) {
-        this.movimientos.set(new Date(), cantidad);
-        this.saldo += cantidad;
+        setTimeout(() => {
+            this.movimientos.set(new Date().getDate(), cantidad);
+            this.saldo += cantidad;
+        }, 1500);
     }
 }
-let cli = new Cliente("meh");
 
-cli.agregarMovimientos(50)
-console.log(cli.movimientos.keys())
-console.log(cli.movimientos.values())
+
+
+
+/* let cli = new Cliente("meh");
+
+
+
+function mira() {
+    
+    cli.agregarMovimientos(50)
+    cli.agregarMovimientos(50)
+    cli.agregarMovimientos(700)
+
+
+
+    
+         if (cli.movimientos.has(hoy)) {
+             let valor = cli.movimientos.forEach(v => {
+                 v += v;
+             })
+             console.log(valor);
+         }
+}
+
+mira();
+let hoy = new Date();
+
+setTimeout(() => {
+    let valor=cli.movimientos.forEach(d=>{
+        d+=d.get();
+    })
+
+    console.log(valor)
+}, 1500*4);
+
+ */
 
 
 module.exports = Cliente;

@@ -71,7 +71,7 @@ describe("Test de cliente", () => {
         }
     })
 
-    test("",()=>{
+    test("comprobar que solo puede extraer 600€ como máximo al día ",()=>{
         
     })
 

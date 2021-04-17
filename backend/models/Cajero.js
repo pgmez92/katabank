@@ -24,6 +24,14 @@ class Cajero {
         if (this.cliActivo.saldo <= cantidad) {
             return null;
         }
+
+/*         if(this.cliActivo.movimientos){
+            let hoy= new Date.getDate();
+            if(this.cliActivo.movimientos.has(hoy)){
+                
+            }
+        } */
+
         if (cantidad > 600) {
             this.cliActivo.saldo -= 600
             return this.cliActivo.saldo;
